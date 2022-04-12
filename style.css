@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 10px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #acabab;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar-nav a:hover {
+    background: gray;
+    color: #fff!important;
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.home {
+    background-image: url(https://www.w3schools.com/w3images/architect.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about-row img {
+    filter: grayscale(70%);
+}
+
+.about-row .team-content .btn:hover {
+    background: #acabab!important;
+}
+
+.form .btn:hover {
+    background: #acabab!important;
+    color: #333!important;
+}
