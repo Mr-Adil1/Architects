@@ -49,3 +49,7 @@ body {
     background: #acabab!important;
     color: #333!important;
 }
+
+.alert {
+    left: -500px!important;
+}

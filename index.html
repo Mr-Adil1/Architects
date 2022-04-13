@@ -152,14 +152,18 @@
             <h2 class="fs-3">Contact</h2>
         </div>
         <div class="container-fluid d-flex flex-column gap-3">
+            <div class="alert alert-success alert-dismissible position-absolute top-10%">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Success!</strong> form has been submitted successfully.
+            </div>
             <div class="msg w-100 p-3">
                 <p class="text-start">Lets get in touch and talk about your next project.</p>
                 <form class="form">
-                    <input class="form-control mt-4 p-2" type="text" name="name" id="name" placeholder="Name">
-                    <input class="form-control mt-4 p-2" type="email" name="email" id="email" placeholder="Email">
-                    <input class="form-control mt-4 p-2" type="text" name="subject" id="subject" placeholder="Subject">
-                    <input class="form-control mt-4 p-2" type="text" name="message" id="msg" placeholder="Message">
-                    <input class="btn mt-4 p-2 bg-black text-white" style="width: 150px;" type="submit" value="Submit">
+                    <input class="form-control mt-4 p-2" type="text" name="name" id="name" placeholder="Name" required>
+                    <input class="form-control mt-4 p-2" type="email" name="email" id="email" placeholder="Email" required>
+                    <input class="form-control mt-4 p-2" type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <input class="form-control mt-4 p-2" type="text" name="message" id="msg" placeholder="Message" required>
+                    <input class="btn mt-4 p-2 bg-black text-white" id="submit" style="width: 150px;" type="submit" value="Submit">
                 </form>
             </div>
         </div>
@@ -181,6 +185,10 @@
             $('#showbtn').click(() => {
                 var show = $("#show").slideToggle();
                 $(".bxs-chevron-down").toggleClass('bxs-chevron-up');
+            })
+            $("#submit").click((e) => {
+                e.preventDefault();
+                $('form').addClass('was-validated');
             })
 
         })
