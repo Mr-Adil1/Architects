@@ -96,7 +96,7 @@
                         fugit nesciunt rem voluptas reprehenderit culpa. Aperiam non assumenda nesciunt inventore accusantium eum sunt ad voluptates ut blanditiis, alias saepe facilis quaerat consectetur! Vero inventore assumenda enim nulla pariatur sit nostrum harum modi. At
                         itaque inventore distinctio dolores commodi. Dolore rem assumenda voluptatibus, fuga obcaecati error eos.
                     </div>
-                    <button class="btn text-white p-2 bg-dark" id="showbtn"><span>Read more</span> <i class="bx bxs-chevron-down text-center"></i></button>
+                    <button class="btn text-white bg-dark" id="showbtn"><i class="bx bxs-chevron-down text-center"></i></button>
                 </p>
             </div>
             <div class="row p-3 gap-3 justify-content-center mt-4 about-row px-5">
@@ -181,13 +181,8 @@
             $('#showbtn').click(() => {
                 var show = $("#show").slideToggle();
                 $(".bxs-chevron-down").toggleClass('bxs-chevron-up');
-                var read = $('#showbtn span');
-                if (show.slideDown) {
-                    read.html('Read Less');
-                } else if (show.slideUp) {
-                    read.html('Read More')
-                }
             })
+
         })
     </script>
 </body>
